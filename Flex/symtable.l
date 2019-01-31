@@ -76,12 +76,13 @@ void addref(int lineno, char *word, int flags){
 
 void printrefs(){
 	struct symbol *sp;
-
+	int n=0;
 	for(sp = symtab; sp->name && sp < symtab+NHASH; sp++){
 		//reverse reference list
 		struct ref *rp = sp->reflist;
 		struct ref *rpp = 0; //prev
 		struct ref *rpn; //next
+		n = 0;
 
 		do{
 			rpn = rp->next;
@@ -94,7 +95,9 @@ void printrefs(){
 		printf("%10s", sp->name);
 		for(rp = rpp; rp; rp = rp->next) {
 			printf(" %d", rp->lineno);
+			n++;
 		}
+		printf(" freq=%d", n);
 		printf("\n");
 	}
 }
