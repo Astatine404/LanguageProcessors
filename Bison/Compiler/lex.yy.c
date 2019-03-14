@@ -378,8 +378,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 4
-#define YY_END_OF_BUFFER 5
+#define YY_NUM_RULES 21
+#define YY_END_OF_BUFFER 22
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -387,9 +387,12 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[11] =
+static yyconst flex_int16_t yy_accept[36] =
     {   0,
-        0,    0,    5,    3,    3,    1,    2,    2,    1,    0
+        0,    0,   22,   21,    1,    4,   21,   10,   12,   13,
+        8,    6,    7,   11,    2,   14,    5,   15,    9,   20,
+       20,   20,   17,    0,    2,   16,   20,   20,   20,    3,
+       20,   20,   18,   19,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -397,17 +400,17 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    4,    4,    1,    4,    1,    4,    1,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    1,    1,    1,
-        1,    1,    1,    4,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        5,    5,    5,    5,    5,    5,    5,    5,    5,    5,
-        1,    1,    1,    1,    1,    1,    5,    5,    5,    5,
+        1,    2,    4,    1,    1,    1,    5,    1,    1,    6,
+        7,    8,    9,    1,   10,   11,   12,   13,   13,   13,
+       13,   13,   13,   13,   13,   13,   13,    1,    1,   14,
+       15,   16,    1,   17,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+       18,   18,   18,   18,   18,   18,   18,   18,   18,   18,
+        1,    1,    1,    1,    1,    1,   18,   18,   18,   18,
 
-        5,    5,    5,    5,    5,    5,    5,    5,    6,    5,
-        5,    5,    5,    5,    5,    5,    7,    5,    5,    5,
-        5,    5,    1,    1,    1,    1,    1,    1,    1,    1,
+       19,   18,   18,   18,   20,   18,   18,   18,   18,   18,
+       18,   18,   21,   18,   18,   22,   23,   18,   18,   24,
+       18,   18,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -424,31 +427,49 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst YY_CHAR yy_meta[8] =
+static yyconst YY_CHAR yy_meta[25] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    2,    1,    1,    1,    1,    2,    2,    2,
+        2,    2,    2,    2
     } ;
 
-static yyconst flex_uint16_t yy_base[11] =
+static yyconst flex_uint16_t yy_base[37] =
     {   0,
-        0,    0,    9,   10,   10,   10,   10,    2,   10,   10
+        0,    0,   40,   41,   41,   41,   24,   41,   41,   41,
+       41,   41,   41,   41,   14,   41,   23,   41,   41,    0,
+       13,   13,   41,   22,   15,   41,    0,   14,   13,   19,
+        9,    8,    0,    0,   41,   27
     } ;
 
-static yyconst flex_int16_t yy_def[11] =
+static yyconst flex_int16_t yy_def[37] =
     {   0,
-       10,    1,   10,   10,   10,   10,   10,   10,   10,    0
+       35,    1,   35,   35,   35,   35,   35,   35,   35,   35,
+       35,   35,   35,   35,   35,   35,   35,   35,   35,   36,
+       36,   36,   35,   35,   35,   35,   36,   36,   36,   35,
+       36,   36,   36,   36,    0,   35
     } ;
 
-static yyconst flex_uint16_t yy_nxt[18] =
+static yyconst flex_uint16_t yy_nxt[66] =
     {   0,
-        4,    5,    4,    6,    7,    7,    8,    9,   10,    3,
-       10,   10,   10,   10,   10,   10,   10
+        4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
+        4,   14,   15,   16,   17,   18,   19,   20,   21,   20,
+       22,   20,   20,   20,   24,   24,   25,   25,   27,   34,
+       33,   30,   32,   31,   30,   29,   28,   26,   23,   35,
+        3,   35,   35,   35,   35,   35,   35,   35,   35,   35,
+       35,   35,   35,   35,   35,   35,   35,   35,   35,   35,
+       35,   35,   35,   35,   35
     } ;
 
-static yyconst flex_int16_t yy_chk[18] =
+static yyconst flex_int16_t yy_chk[66] =
     {   0,
-        1,    1,    1,    1,    1,    1,    1,    8,    3,   10,
-       10,   10,   10,   10,   10,   10,   10
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,   15,   25,   15,   25,   36,   32,
+       31,   30,   29,   28,   24,   22,   21,   17,    7,    3,
+       35,   35,   35,   35,   35,   35,   35,   35,   35,   35,
+       35,   35,   35,   35,   35,   35,   35,   35,   35,   35,
+       35,   35,   35,   35,   35
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -465,22 +486,14 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "in_post_exp.l"
-#line 4 "in_post_exp.l"
-	#include<bits/stdc++.h>
-	using namespace std;
+#line 1 "comp.l"
+#line 4 "comp.l"
+#include <stdio.h>
+#include <string.h>
 
-	struct TNode {
-		string symbol;
-		struct TNode *right;
-		struct TNode *left;
-	};
+#include "comp.tab.h"
 
-	void operater(char*);
-	void operand(char*);
-	stack<struct TNode*> opd;
-	stack<struct TNode*> opr;
-#line 484 "lex.yy.c"
+#line 497 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -698,10 +711,10 @@ YY_DECL
 		}
 
 	{
-#line 19 "in_post_exp.l"
+#line 11 "comp.l"
 
 
-#line 705 "lex.yy.c"
+#line 718 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -728,13 +741,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 11 )
+				if ( yy_current_state >= 36 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 10 );
+		while ( yy_base[yy_current_state] != 41 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -760,26 +773,111 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 21 "in_post_exp.l"
-/*{cout<<"Operator "<<yytext<<endl;}*/ {operater(yytext);}
+#line 13 "comp.l"
+{} // ignore all whitespace
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "in_post_exp.l"
-/*{cout<<"Operand "<<yytext<<endl;}*/ {operand(yytext);}
+#line 14 "comp.l"
+{strcpy(yylval.cval, yytext); strcat(yylval.cval, ".0"); return NUM;}
 	YY_BREAK
 case 3:
-/* rule 3 can match eol */
 YY_RULE_SETUP
-#line 23 "in_post_exp.l"
-{}  //ignore
+#line 15 "comp.l"
+{strcpy(yylval.cval, yytext); return NUM;}
 	YY_BREAK
 case 4:
+/* rule 4 can match eol */
 YY_RULE_SETUP
-#line 25 "in_post_exp.l"
+#line 16 "comp.l"
+{return NEWLINE;}
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 17 "comp.l"
+{return ASSG;}
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 18 "comp.l"
+{return PLUS;}
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 19 "comp.l"
+{return MINUS;}
+	YY_BREAK
+case 8:
+YY_RULE_SETUP
+#line 20 "comp.l"
+{return MULTIPLY;}
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 21 "comp.l"
+{return EXP;}
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 22 "comp.l"
+{return MOD;}
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 23 "comp.l"
+{return DIVIDE;}
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 24 "comp.l"
+{return LEFT;}
+	YY_BREAK
+case 13:
+YY_RULE_SETUP
+#line 25 "comp.l"
+{return RIGHT;}
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 26 "comp.l"
+{return LESS;}
+	YY_BREAK
+case 15:
+YY_RULE_SETUP
+#line 27 "comp.l"
+{return GREATER;}
+	YY_BREAK
+case 16:
+YY_RULE_SETUP
+#line 28 "comp.l"
+{return EQUAL;}
+	YY_BREAK
+case 17:
+YY_RULE_SETUP
+#line 29 "comp.l"
+{return NOTEQUAL;}
+	YY_BREAK
+case 18:
+YY_RULE_SETUP
+#line 30 "comp.l"
+{return QUIT;}
+	YY_BREAK
+case 19:
+YY_RULE_SETUP
+#line 31 "comp.l"
+{return QUIT;}
+	YY_BREAK
+case 20:
+YY_RULE_SETUP
+#line 32 "comp.l"
+{strcpy(yylval.cval, yytext); return ID;}
+	YY_BREAK
+case 21:
+YY_RULE_SETUP
+#line 34 "comp.l"
 ECHO;
 	YY_BREAK
-#line 783 "lex.yy.c"
+#line 881 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1072,7 +1170,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 11 )
+			if ( yy_current_state >= 36 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1100,11 +1198,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 11 )
+		if ( yy_current_state >= 36 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 10);
+	yy_is_jam = (yy_current_state == 35);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1780,96 +1878,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 25 "in_post_exp.l"
+#line 34 "comp.l"
 
 
-
-int prec(string p){
-	if(p=="um")
-		return 5;
-	if(p=="@")
-		return 4;
-	if(p=="*"||p=="/")
-		return 3;
-	if(p=="+"||p=="-")
-		return 2;
-	cout<<"Error!";
-}
-
-void operater(char* str){
-	string op(str);
-	//cout<<op;
-	struct TNode *root = new (struct TNode);
-	struct TNode *tmp;
-	root->symbol = op;
-	root->right = NULL;
-	root->left = NULL;
-
-	if(opr.empty()){
-		opr.push(root);
-		return;
-	}
-	
-	if(prec(op)>prec(opr.top()->symbol)){
-		opr.push(root);
-		return;
-	}
-	
-	while(!opr.empty()){
-		if(prec(op)<=prec(opr.top()->symbol)){
-			if(op=="@"&&prec(op)==prec(opr.top()->symbol))
-				break;
-			tmp = opr.top();
-			opr.pop();
-			
-				tmp->right = opd.top(); opd.pop();
-				tmp->left = opd.top(); opd.pop();
-			
-			
-			opd.push(tmp);
-		}
-		else
-		break;
-	}
-
-	opr.push(root);
-	return;
-
-}
-
-void operand(char* str){
-	string op(str);
-	struct TNode *root = new (struct TNode);
-	root->symbol = op;
-	root->right = NULL;
-	root->left = NULL;
-	opd.push(root);
-}
-
-void postorder(struct TNode *root){
-	if(!root)
-		return;
-
-	postorder(root->left);
-	postorder(root->right);
-	cout<<root->symbol;
-}
-
-int main(){
-	yylex();
-	struct TNode *tmp;
-	while(!opr.empty()){
-		tmp = opr.top(); opr.pop();
-		tmp->right = opd.top(); opd.pop();
-		tmp->left = opd.top(); opd.pop();
-		opd.push(tmp);
-	}
-	
-	if(opd.size()==1)
-		postorder(opd.top());
-	else
-		cout<<"Error!";
-
-	cout<<endl;
-	return 0;
-}
