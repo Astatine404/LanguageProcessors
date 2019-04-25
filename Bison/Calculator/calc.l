@@ -10,7 +10,7 @@
 
 %%
 
-[ \t]	; // ignore all whitespace
+[ \t]+	; // ignore all whitespace
 [0-9]+		{yylval.ival = atoi(yytext); return IINT;}
 \n		{return NEWLINE;}
 "display" {return DISP;}
@@ -34,5 +34,6 @@
 "exit"		{return QUIT;}
 "quit"		{return QUIT;}
 [a-zA-Z][a-zA-Z0-9]* {strcpy(yylval.cval, yytext); return ID;}
+.		{yyerror("Mystery str: %s", yytext);}
 
 %%
